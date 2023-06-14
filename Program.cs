@@ -5,12 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddGraphQLServer("schema1")
     .AddQueryType<Query1>()
-    .AddDiagnosticEventListener<ExampleDiagnosticsEventListener>();
+    .AddDiagnosticEventListener<ExampleDiagnosticsEventListener1>();
 
 builder.Services
     .AddGraphQLServer("schema2")
     .AddQueryType<Query2>()
-    .AddDiagnosticEventListener<ExampleDiagnosticsEventListener>();
+    .AddDiagnosticEventListener<ExampleDiagnosticsEventListener2>();
 
 var app = builder.Build();
 
